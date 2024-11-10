@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mause Herramientas</title>
+    <style>
+        /* Estilo para el menú de navegación */
+        .navbar {
+            background-color: #FFD700; /* Amarillo */
+        }
+        .navbar .nav-link {
+            color: #000000 !important; /* Negro */
+        }
+        .navbar .nav-link:hover {
+            color: #333333 !important; /* Gris oscuro */
+        }
+        .card {
+            padding: 20px;
+        }
+        /* Estilo para asegurar que todas las imágenes del carrusel tengan el mismo tamaño */
+        .carousel-item img {
+            width: 100%; /* Asegura que la imagen ocupe todo el ancho del carrusel */
+            height: 500px; /* Establece una altura fija para todas las imágenes */
+            object-fit: cover; /* Ajusta la imagen para que cubra el contenedor, recortando si es necesario */
+        }
+    </style>
+    <!-- Enlace a CSS de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Mause Herramientas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="acerca.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="preguntas.html">Preguntas</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Carrusel de imágenes automático -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/img1.jpg" class="d-block w-100" alt="Primera Imagen">
+        </div>
+        <div class="carousel-item">
+            <img src="img/img2.jpg" class="d-block w-100" alt="Segunda Imagen">
+        </div>
+        <div class="carousel-item">
+            <img src="img/img3.jpg" class="d-block w-100" alt="Tercera Imagen">
+        </div>
+        <div class="carousel-item">
+            <img src="img/img4.jpg" class="d-block w-100" alt="Cuarta Imagen">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+<!-- Contenido de la página de inicio -->
+<div class="container mt-5">
+    <h1>Bienvenidos a Mause Herramientas</h1>
+    <p>Esta es la página principal donde podrás encontrar información sobre nuestros productos.</p>
+</div>
+
+<!-- Sección de Cuadros de Fotos con Descripciones -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Card de Jardinería -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/jar1.jpg" class="card-img-top" alt="Jardinería">
+                <div class="card-body">
+                    <h5 class="card-title">Jardinería</h5>
+                    <p class="card-text">Encuentra las mejores herramientas y productos para mantener tu jardín hermoso y saludable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card de Pintura y Decoración -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/pin.jpg" class="card-img-top" alt="Pintura y Decoración">
+                <div class="card-body">
+                    <h5 class="card-title">Pintura y Decoración</h5>
+                    <p class="card-text">Transforma tus espacios con nuestra selección de pinturas y artículos de decoración de alta calidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card de Carpintería -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/car.jpg" class="card-img-top" alt="Carpintería">
+                <div class="card-body">
+                    <h5 class="card-title">Carpintería</h5>
+                    <p class="card-text">Todo lo que necesitas para tus proyectos de carpintería, desde herramientas manuales hasta eléctricas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Card de Fontanería -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/fon.jpg" class="card-img-top" alt="Fontanería">
+                <div class="card-body">
+                    <h5 class="card-title">Fontanería</h5>
+                    <p class="card-text">Soluciones y herramientas para cualquier necesidad de fontanería, tanto para el hogar como para proyectos profesionales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card de Muebles -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/mue.jpg" class="card-img-top" alt="Muebles">
+                <div class="card-body">
+                    <h5 class="card-title">Muebles</h5>
+                    <p class="card-text">Amplia gama de muebles para todos los espacios de tu hogar u oficina, con estilo y funcionalidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card de Herramientas Eléctricas -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/her.jpg" class="card-img-top" alt="Herramientas Eléctricas">
+                <div class="card-body">
+                    <h5 class="card-title">Herramientas Eléctricas</h5>
+                    <p class="card-text">Las mejores herramientas eléctricas para facilitar tu trabajo, con la última tecnología y seguridad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enlaces a JavaScript de Bootstrap y jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
