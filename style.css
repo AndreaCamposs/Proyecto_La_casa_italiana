@@ -1,0 +1,94 @@
+body
+{
+    background: #f0f0f0;
+	font-family: Arial, sans-serif;
+	margin:0;
+	padding:0;
+	display: flex;
+	flex-direction: column;	
+}
+table
+{
+	 border-collapse: collapse;
+     width: 100%; 
+}
+th
+{
+	  background-color: #333333;
+      color: white;
+}
+
+th, td 
+{
+	  padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #dddddd;
+}
+a,input[type="submit"]
+{
+	
+	text-align:center;
+	display: inline-block;
+	background:green;
+	padding: 6px 10px;
+	border-radius:5px;
+	text-decoration: none;
+	color:white;
+	border:2px solid black;
+	cursor:pointer;
+	font-size: 16px;
+	
+}
+
+h1
+{
+	font-family: sans-serif;
+	 margin-top:5%;
+      text-align: center;
+      color: #333333;
+}
+
+.contenedor_popup 
+{
+
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	width:400px; 
+	transition: all 0.2s;
+	background-color:white;
+}
+
+.caja_popup2 
+{
+	display: block;
+    position: absolute;
+	padding:0;
+	background-color:rgba(0, 0, 0, 0.5); 
+	width:100%;
+	height:100%;
+}
+
+input[type="text"],input[type="number"],input[type="email"]
+{
+	font-size:16px;
+	background-color:white;
+	color:black;
+	padding: 6px 10px;
+	border-radius:5px;
+}
+
+select
+{
+	width:80%;
+	font-size: 14px;
+}
+.cont 
+{
+	 margin-left: auto;
+	 margin-right: auto;
+	 max-width:1260px;
+     width: 100%; 
+		
+}
