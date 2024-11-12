@@ -44,9 +44,58 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <!-- Search Form -->
+ <!-- Formulario de búsqueda -->
+<form class="form-inline my-2 my-lg-0" action="search.php" method="GET" id="searchForm">
+    <input class="form-control mr-sm-2" type="search" name="query" placeholder="Buscar productos" aria-label="Search">
+    <button class="btn my-2 my-sm-0" type="submit" id="searchBtn">Buscar</button>
+</form>
+
+<script>
+    // Detecta el scroll en la página
+    window.onscroll = function() {
+        changeNavbarBackground();
+    };
+
+    // Cambia el fondo del formulario y el color del botón cuando se hace scroll
+    function changeNavbarBackground() {
+        var form = document.getElementById("searchForm");
+        var button = document.getElementById("searchBtn");
+
+        if (window.scrollY > 50) { // Si se hace scroll de más de 50px
+            form.style.backgroundColor = "#000"; // Fondo negro
+            button.style.backgroundColor = "#28a745"; // Fondo verde para el botón
+            button.style.color = "#fff"; // Texto blanco en el botón
+        } else {
+            form.style.backgroundColor = "transparent"; // Fondo transparente
+            button.style.backgroundColor = ""; // Fondo original del botón
+            button.style.color = ""; // Color de texto original del botón
+        }
+    }
+</script>
+
+<!-- Estilos CSS -->
+<style>
+    /* El formulario tendrá fondo transparente por defecto */
+    #searchForm {
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    #searchForm input {
+        border-radius: 3px;
+    }
+    #searchForm button {
+        border-radius: 3px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+</style>
+
+
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Inicio</a></li>
                         <?php 
-                        $categories = $conn->query("SELECT * FROM `category_list` order by `name` asc");
+                        $categories = $conn->query("SELECT * FROM category_list order by name asc");
                         if($categories->num_rows > 0):
                         ?>
                         <li class="nav-item position-relative " id="cat-menu-link">
